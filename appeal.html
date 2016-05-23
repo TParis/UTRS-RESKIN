@@ -90,39 +90,48 @@
             <div class="clearfix"><br></div>
             <article>
             	<div class="container">
-                	<div class="col-md-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <div class="dropdown pull-right">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Actions</b> <span class="caret"></span></a>
-									<ul class="dropdown-menu">
-                                        <li><a href="#">Reserve</a></li>
-                                        <li><a href="#">Release</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Status: New</a></li>
-                                        <li><a href="#">Status: Hold</a></li>
-                                        <li><a href="#">Status: Invalid</a></li>
-                                        <li><a href="#">Status: Close</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Notify: Blocking Admin</a></li>
-                                        <li><a href="#">Notify: Open Proxy</a></li>
-                                        <li><a href="#">Assign: Checkusers</a></li>
-                                        <li><a href="#">Assign: Reviewing Admin</a></li>
-                                        <li><a href="#">Notify: Wikimedia Foundation</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Status: Awaiting User</a></li>
-                                        <li><a href="#">Email User</a></li>
-                                    </ul>
-                                </div>
-                            	<h3 class="panel-title">
-                                	Appeal Status: <span class="label label-success">Open</span>
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                            	<div class="col-md-8">
-                                	<div class="panel panel-default">
-										<div class="panel-body">
-											<div class="btn-group" role="group" aria-label="...">
+                	<ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#appeal-tab">Appeal</a></li>
+                        <li><a data-toggle="tab" href="#message-tab">Message Center</a></li>
+                        <li><a data-toggle="tab" href="#logs-tab">Audit Logs</a></li>
+                        <li><a data-toggle="tab" href="#logs-tab"><i>Checkuser</i></a></li>
+                        <li><a data-toggle="tab" href="#logs-tab"><i>Oversight</i></a></li>
+                    </ul>
+					<div class="tab-content">
+						<div id="appeal-tab" class="tab-pane fade in active">
+                        	<br>
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="dropdown pull-right">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Actions</b> <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Reserve</a></li>
+                                                <li><a href="#">Release</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Status: New</a></li>
+                                                <li><a href="#">Status: Hold</a></li>
+                                                <li><a href="#">Status: Invalid</a></li>
+                                                <li><a href="#">Status: Close</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Notify: Blocking Admin</a></li>
+                                                <li><a href="#">Notify: Open Proxy</a></li>
+                                                <li><a href="#">Notify: Wikimedia Foundation</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Assign: Checkusers</a></li>
+                                                <li><a href="#">Assign: Reviewing Admin</a></li>
+                                                <li><a href="#">Assign: Awaiting User</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Email User</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3 class="panel-title">
+                                            Appeal Status: <span class="label label-success">Open</span>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-md-8">
+                                            <div class="btn-group" role="group" aria-label="...">
                                                 <button type="button" class="btn btn-default active disabled"><b>TParis-alt</b></button>
                                                 <button type="button" class="btn btn-default">User Page</button>
                                                 <button type="button" class="btn btn-default">Talk Page</button>
@@ -130,20 +139,82 @@
                                                 <button type="button" class="btn btn-default">Find Block</button>
                                                 <button type="button" class="btn btn-default">Edit Count</button>
                                             </div>
-										</div>
-									</div>
-                                </div>
-                                <div class="col-md-4">
-                                	<div class="panel panel-default">
-                                    	<div class="panel-heading">
-                                        	<h3 class="panel-title">Email</h3>
                                         </div>
-                                        <div class="panel-body">
-                                        	<select></select>
+                                        <div class="col-md-4">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Email</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <select onchange="if (this.selectedIndex != 0) { window.location='sendEmail.php?tid=' + this.value + '&amp;id=15839'}">
+		<option value="-1">Please select</option><option value="6">Account Created</option><option value="62">Anon only/Account creation disabled</option><option value="25">Appeal expired</option><option value="75">Arbcom Block</option><option value="59">Ask for IP</option><option value="10">Autoblock (expired)</option><option value="11">Autoblock (Opera IP range)</option><option value="52">Autoblock (unblocked)</option><option value="42">Autoblock doing its job</option><option value="43">Block expired</option><option value="41">Blocks for editing only</option><option value="30">Can't locate account</option><option value="71">CheckUser confirmed (Standard Offer)</option><option value="55">CheckUser queue delayed</option><option value="45">Compromised account</option><option value="70">Create new account (COI warning)</option><option value="8">Custom response</option><option value="17">Custom response - Awaiting User</option><option value="16">Custom response - Close</option><option value="32">Decline - Spam Edits</option><option value="34">Decline - Spam Edits+Spam Username</option><option value="66">Discussing with blocking administrator</option><option value="38">Disruptive appeals not considered</option><option value="21">Does Not Address Reason for Block</option><option value="37">Duplicate - UTRS (open)</option><option value="67">Duplicate - UTRS (replied, closed)</option><option value="24">Duplicate - UTRS (replied, pending)</option><option value="23">Duplicate Request - already on-wiki</option><option value="40">Hotspot Shield</option><option value="53">IP block exempt (granted)</option><option value="60">IP block exempt (TorBlock bug)</option><option value="74">IPBE request on hard rangeblock</option><option value="56">Little Brother</option><option value="72">Meatpuppetry</option><option value="63">Migration</option><option value="3">Need Block Information</option><option value="57">Need Block Information (Corrupt IP)</option><option value="36">No block found</option><option value="44">No Legal Threats - close</option><option value="28">Not enwp</option><option value="47">Rangeblocks/IPs + COI</option><option value="4">Rangeblocks/Large IPs (Divert to ACC)</option><option value="73">Redirect request to user talk</option><option value="15">School (undo account creation)</option><option value="49">School - send to ACC</option><option value="46">School block + COI</option><option value="22">School block - Create account at home</option><option value="54">Second chance</option><option value="29">Second chance (talk page access revoked)</option><option value="18">Send to ArbCom (CU/OS Blocks only)</option><option value="58">Soft block</option><option value="51">Standard Offer</option><option value="26">Standard Offer (delayed)</option><option value="39">Technical difficulties</option><option value="12">Too Similar to existing account</option><option value="9">Tor/Proxy block</option><option value="27">Unblocked (account)</option><option value="50">Unblocked (allow username change)</option><option value="68">Unblocked (already)</option><option value="69">Unblocked (COI warning)</option><option value="14">Unblocked (IP)</option><option value="79">Unblocked (IPBE)</option><option value="61">Unblocked (proxy)</option><option value="1">Username (Company - Long)</option><option value="2">Username (Company - Short)</option><option value="76">Username change + COI warning</option><option value="48">Username taken</option><option value="78">Webhost block</option><option value="77">WP:COI + WP:OWN</option>	</select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Why do you believe you should be unblocked?</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Ban Management</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="btn-group" role="group" aria-label="...">
+                                                        <button type="button" class="btn btn-default">IP</button>
+                                                        <button type="button" class="btn btn-default">Email</button>
+                                                        <button type="button" class="btn btn-default">Username</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">If you are unblocked, what articles do you intend to edit?</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Why do you think there is a block currently affecting you?  If you believe it's in error, tell us how.</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">Is there anything else you would like us to consider when reviewing your block?</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+            				<div class="clearfix"><br></div>
+                        </div>
+                        <div id="message-tab" class="tab-pane fade">
+                        	<p>Some content in menu 1.</p>
+                        </div>
+                        <div id="logs-tab" class="tab-pane fade">
+                        	<p>Some content in menu 2.</p>
                         </div>
                     </div>
                 </div>
