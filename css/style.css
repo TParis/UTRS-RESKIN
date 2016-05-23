@@ -1,0 +1,10 @@
+/* CSS Document */
+
+.navbar-center {
+	margin: auto;
+	max-width: 1250px;
+}
+
+.list-group-item:hover {
+	background-color: #EEE;
+}
