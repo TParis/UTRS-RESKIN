@@ -1,0 +1,55 @@
+/* CSS Document */
+html {
+       overflow-y: scroll;
+}
+
+.navbar-center {
+	margin: auto;
+	max-width: 1250px;
+}
+
+.list-group-item:hover {
+	background-color: #EEE;
+}
+
+.tab-pane {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	height: auto;
+}
+
+.user-info {
+	background-color: #BFFFCB;
+}
+
+/* Message Logs */
+.message-grey {
+	background-color: #CCC;
+}
+.message-yellow {
+	background-color: #F7FABE;
+}
+.message-red {
+	background-color: #F07B6A;
+}
+.message-green {
+	background-color: #9FFFA5;
+}
+.message-blue {
+	background-color: #BBD3EC;
+}
+
+.panel-progress {
+	background-color: #E8F1D4;
+}
+
+.page {
+	min-height: 300px;
+	vertical-align: middle;
+}
+
+.page-1 {
+	margin: auto;
+	margin-top: auto;
+}

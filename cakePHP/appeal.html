@@ -94,8 +94,9 @@
                         <li class="active"><a data-toggle="tab" href="#appeal-tab">Appeal</a></li>
                         <li><a data-toggle="tab" href="#message-tab">Message Center</a></li>
                         <li><a data-toggle="tab" href="#logs-tab">Audit Logs</a></li>
-                        <li><a data-toggle="tab" href="#logs-tab"><i>Checkuser</i></a></li>
-                        <li><a data-toggle="tab" href="#logs-tab"><i>Oversight</i></a></li>
+                        <li><a data-toggle="tab" href="#cu-tab"><i>Checkuser</i></a></li>
+                        <li><a data-toggle="tab" href="#os-tab"><i>Oversight</i></a></li>
+                        <li><a data-toggle="tab" href="#admin-tab"><i>Tool Admin</i></a></li>
                     </ul>
 					<div class="tab-content">
 						<div id="appeal-tab" class="tab-pane fade in active">
@@ -131,6 +132,13 @@
                                     </div>
                                     <div class="panel-body">
                                         <div class="col-md-8">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Unblock reason">
+                                                <div class="input-group-btn">
+	                                            	<button type="submit" class="btn btn-default">Unblock</button>
+                                                </div>
+                                            </div>
+            								<div class="clearfix"><br></div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <h3 class="panel-title">Why do you believe you should be unblocked?</h3>
@@ -165,7 +173,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                        	<div class="panel panel-default">
+                                        	<div class="panel panel-default user-info">
                                             	<div class="panel-body">
                                                     <span class="pull-left">
                                                         <font size="+1">TParis-alt</font><br>
@@ -187,7 +195,7 @@
                                                     <h3 class="panel-title">Email</h3>
                                                 </div>
                                                 <div class="panel-body">
-                                                    <select onchange="if (this.selectedIndex != 0) { window.location='sendEmail.php?tid=' + this.value + '&amp;id=15839'}">
+                                                    <select class="form-control" onchange="if (this.selectedIndex != 0) { window.location='sendEmail.php?tid=' + this.value + '&amp;id=15839'}">
 		<option value="-1">Please select</option><option value="6">Account Created</option><option value="62">Anon only/Account creation disabled</option><option value="25">Appeal expired</option><option value="75">Arbcom Block</option><option value="59">Ask for IP</option><option value="10">Autoblock (expired)</option><option value="11">Autoblock (Opera IP range)</option><option value="52">Autoblock (unblocked)</option><option value="42">Autoblock doing its job</option><option value="43">Block expired</option><option value="41">Blocks for editing only</option><option value="30">Can't locate account</option><option value="71">CheckUser confirmed (Standard Offer)</option><option value="55">CheckUser queue delayed</option><option value="45">Compromised account</option><option value="70">Create new account (COI warning)</option><option value="8">Custom response</option><option value="17">Custom response - Awaiting User</option><option value="16">Custom response - Close</option><option value="32">Decline - Spam Edits</option><option value="34">Decline - Spam Edits+Spam Username</option><option value="66">Discussing with blocking administrator</option><option value="38">Disruptive appeals not considered</option><option value="21">Does Not Address Reason for Block</option><option value="37">Duplicate - UTRS (open)</option><option value="67">Duplicate - UTRS (replied, closed)</option><option value="24">Duplicate - UTRS (replied, pending)</option><option value="23">Duplicate Request - already on-wiki</option><option value="40">Hotspot Shield</option><option value="53">IP block exempt (granted)</option><option value="60">IP block exempt (TorBlock bug)</option><option value="74">IPBE request on hard rangeblock</option><option value="56">Little Brother</option><option value="72">Meatpuppetry</option><option value="63">Migration</option><option value="3">Need Block Information</option><option value="57">Need Block Information (Corrupt IP)</option><option value="36">No block found</option><option value="44">No Legal Threats - close</option><option value="28">Not enwp</option><option value="47">Rangeblocks/IPs + COI</option><option value="4">Rangeblocks/Large IPs (Divert to ACC)</option><option value="73">Redirect request to user talk</option><option value="15">School (undo account creation)</option><option value="49">School - send to ACC</option><option value="46">School block + COI</option><option value="22">School block - Create account at home</option><option value="54">Second chance</option><option value="29">Second chance (talk page access revoked)</option><option value="18">Send to ArbCom (CU/OS Blocks only)</option><option value="58">Soft block</option><option value="51">Standard Offer</option><option value="26">Standard Offer (delayed)</option><option value="39">Technical difficulties</option><option value="12">Too Similar to existing account</option><option value="9">Tor/Proxy block</option><option value="27">Unblocked (account)</option><option value="50">Unblocked (allow username change)</option><option value="68">Unblocked (already)</option><option value="69">Unblocked (COI warning)</option><option value="14">Unblocked (IP)</option><option value="79">Unblocked (IPBE)</option><option value="61">Unblocked (proxy)</option><option value="1">Username (Company - Long)</option><option value="2">Username (Company - Short)</option><option value="76">Username change + COI warning</option><option value="48">Username taken</option><option value="78">Webhost block</option><option value="77">WP:COI + WP:OWN</option>	</select>
                                                 </div>
                                             </div>
@@ -241,10 +249,114 @@
             				<div class="clearfix"><br></div>
                         </div>
                         <div id="message-tab" class="tab-pane fade">
-                        	<p>Some content in menu 1.</p>
+            				<div class="clearfix"><br></div>
+                        	<div class="col-md-10 col-md-offset-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">2016-05-23 @ 13:28 GMT</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Hello TParis-alt,<br>
+                                        <br>
+                                        I see that you've been blocked for edit warring.  If I unblock you, do you promise you will not return to that article until the block would have expired?<br>
+                                        <br>
+                                        TParis<br>
+                                        English Wikipedia Administrator
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">2016-05-23 @ 16:11 GMT</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        TParis,<br>
+                                        <br>
+                                        Yes, I will stay off that article until the block would have expired anyway.  Thanks.<br>
+                                        <br>
+                                        TParis-alt
+                                    </div>
+                                </div>
+                            </div>
+            				<div class="clearfix"><br></div>
                         </div>
                         <div id="logs-tab" class="tab-pane fade">
+            				<div class="clearfix"><br></div>
+                        	<div class="col-md-10 col-md-offset-1">
+                                <div class="panel panel-default message-grey">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 12:13 GMT:</i> Appeal Created
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-grey">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 12:17 GMT:</i> Email Verified
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-blue">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 13:28 GMT:</i> <a href="#"><b>TParis</b></a> sent an email to <b>TParis-alt</b> using <b>Custom response - awaiting user</b> template
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-yellow">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 13:28 GMT:</i> Status changed to <b>AWAITING_USER</b>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-blue">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 16:11 GMT:</i> <b>TParis-alt</b> sent an email to <a href="#"><b>TParis</b></a>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-yellow">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 16:11 GMT:</i> Status changed to <b>AWAITING_REVIEWER</b>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-green">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 20:05 GMT:</i> Result: <b>UNBLOCKED</b>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default message-yellow">
+                                    <div class="panel-body">
+                                        <i>2016-05-23 @ 20:05 GMT:</i> Status changed to <b>CLOSED</b>
+                                    </div>
+                                </div>
+                            </div>
+            				<div class="clearfix"><br></div>
+                        </div>
+                        <div id="cu-tab" class="tab-pane fade">
+            				<div class="clearfix"><br></div>
+                            <div class="col-md-4">
+                            	<input type="text" class="form-control" name="cu-reveal-reason" placeholder="Enter reveal reason"><br>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default disabled">REVEAL</button>
+                                    <button type="button" class="btn btn-default">IP Address</button>
+                                    <button type="button" class="btn btn-default">Email</button>
+                                    <button type="button" class="btn btn-default">Useragent</button>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                            	<div class="well cu-reveal">
+                                	IP Address: 204.54.34.184
+                                </div>
+                            </div>
+            				<div class="clearfix"><br></div>
+            				<div class="clearfix"><br></div>
+                            <div class="col-md-12">
+                                    <div class="panel panel-default message-yellow">
+                                        <div class="panel-body">
+                                            <i>2016-05-23 @ 16:11 GMT:</i> <b>IP address</b> revealed by <a href="#"><b>DeltaQuad</b></a> because: <i>ensuring there hasn't been any sockpuppetry</i>
+                                        </div>
+                                </div>
+                            </div>
+            				<div class="clearfix"><br></div>
+                        </div>
+                        <div id="os-tab" class="tab-pane fade">
                         	<p>Some content in menu 2.</p>
+                        </div>
+                        <div id="admin-tab" class="tab-pane fade">
+                        	<p>Some content in menu 1.</p>
                         </div>
                     </div>
                 </div>
